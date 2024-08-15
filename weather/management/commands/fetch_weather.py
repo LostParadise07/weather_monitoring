@@ -12,7 +12,7 @@ class Command(BaseCommand):
         cities = ['Delhi', 'Mumbai', 'Chennai', 'Bangalore', 'Kolkata', 'Hyderabad']
         for city in cities:
             try:
-                response = requests.get(f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}')
+                response = requests.get(f'http://api.openweathermap.org/data/2.5/weather?q={city},india&APPID={api_key}')
                 data = response.json()
 
                 # Print the response to check its structure
